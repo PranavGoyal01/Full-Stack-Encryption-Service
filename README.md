@@ -11,15 +11,15 @@ SecureLog is a full-stack encryption service that provides Caesar cipher encrypt
 │                         Docker Compose                          │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
-│  ┌──────────────┐      ┌──────────────┐      ┌──────────────┐ │
-│  │    Web       │      │   Server     │      │   Database   │ │
-│  │   (NGINX)    │─────▶│  (FastAPI)   │─────▶│ (PostgreSQL) │ │
-│  │   Port 80    │      │  Port 8000   │      │  Port 5432   │ │
-│  └──────────────┘      └──────────────┘      └──────────────┘ │
+│  ┌──────────────┐      ┌──────────────┐      ┌──────────────┐   │
+│  │    Web       │      │   Server     │      │   Database   │   │
+│  │   (NGINX)    │─────▶│  (FastAPI)   │─────▶│ (PostgreSQL)│   │
+│  │   Port 80    │      │  Port 8000   │      │  Port 5432   │   │
+│  └──────────────┘      └──────────────┘      └──────────────┘   │
 │         │                      │                      │         │
-│    React App            Caesar Cipher           Logs Table     │
+│    React App            Caesar Cipher           Logs Table      │
 │    Material-UI          SQLAlchemy              (id, timestamp, │
-│    Axios Client         Pydantic Schemas         ip, data)     │
+│    Axios Client         Pydantic Schemas         ip, data)      │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘
 
