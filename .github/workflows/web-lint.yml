@@ -1,0 +1,29 @@
+name: Web Lint
+
+on:
+    push:
+        paths:
+            - "web/**"
+            - ".github/workflows/web-lint.yml"
+
+jobs:
+    lint:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: "16"
+                  cache: "npm"
+                  cache-dependency-path: web/package-lock.json
+
+            - name: Install Dependencies
+              working-directory: ./web
+              run: npm ci
+
+            - name: Lint
+              working-directory: ./web
+              run: npx eslint src --ext .js,.jsx
