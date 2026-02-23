@@ -1,5 +1,7 @@
 # SecureLog Encryption Service
 
+**Made for the F25 Blueprint Project Team Dev Challenge**
+
 ## Overview
 
 SecureLog is a full-stack encryption service that provides Caesar cipher encryption/decryption with comprehensive logging. The application encrypts and decrypts data using a shift key and maintains a paginated log of all operations.
